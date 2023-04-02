@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/final.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tillana&display=swap" rel="stylesheet">
+    <title>Testing media queries</title>
+</head>
+
+<body>
+    <div class="bg-blue-700/40 py-7 px-6" style="font-family: 'Tillana', cursive;">
+        <!-- 1st division -->
+        <div class="bg-white/70 rounded-3xl flex flex-col md:flex-row">
+            <!-- 2nd division -->
+            <div class="back_image text-white flex flex-col rounded-xl py-2 px-1 md:w-3/5">
+                <!-- mailbox -->
+                <a name="#mailbox">
+                    <div id="Mailbox"
+                        class="hidden bg-blue-100 shadow-md shadow-blue-700 absolute left-1/2 top-20 w-3/5">
+                        <nav id="MailNav" class="bg-blue-500 w-full flex">
+                            <p class="w-3/5">Mail to : ayush</p>
+                            <div class="w-2/5 justify-end flex">
+                                <div id="Close_Mailbox" class="text-center w-8 hover:bg-red-600"> X </div>
+                            </div>
+                        </nav>
+                        <form class="flex flex-col items-center px-2 pb-2 mx-10"
+                            action="https://formspree.io/f/xeqwrleb" method="post">
+                            <br>
+                            <input class="w-full text-black" type="email" name="mailemail"
+                                placeholder="Enter your email" required>
+                            <br>
+                            <textarea class="w-full text-black" name="mailmsg" cols="30" rows="10"
+                                placeholder="Enter your message" required></textarea>
+                            <br>
+                            <button
+                                class="bg-white text-black px-2 py-1 transition-transform duration-200 hover:scale-110 active:bg-blue-200"
+                                type="submit">submit</button>
+                        </form>
+                    </div>
+                </a>
+                <!-- navbar -->
+                <div class="rounded-xl px-3 py-2">
+                    <div class="flex">
+                        <h1 class="w-2/4 font-bold text-4xl pt-3">
+                            <span class="text-gray-500 text-5xl">W</span><span class="text-black">eather</span><span
+                                class="text-blue-700"> Forecast</span>
+                        </h1>
+                        <!-- location side -->
+                        <div class="flex justify-end w-2/4">
+                            <div
+                                class=" rounded-xl p-2 flex bg-white/50 transition-transform duration-100 hover:scale-105">
+                                <img src="/location_logo.png" alt="img" class="h-12 w-12">
+                                <div class="flex flex-col">
+                                    <span class="text-blue-900 text-sm font-semibold">Current Location</span>
+                                    <span class="text-gray-800 uppercase" id="Name_of_city">lucknow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="h-1 bg-blue-600 w-1/6 md:ml-28 ml-16">
+                </div>
+                <!-- image body -->
+                <div class="h-4/5 justify-center items-center flex flex-col ">
+                    <h1 class="w-full text-center font-bold text-4xl">the only weather forecast you need</h1>
+                    <br>
+                    <hr class="h-2 bg-blue-700 w-1/4">
+                    <br>
+                    <br>
+                    <input type="text" name="city_name" value="lucknow"
+                        class="rounded-xl w-4/5 h-8 px-2 back_image_search text-black bg-white/80 border-2 border-blue-900 bg-blue-100">
+                    <button type="submit"
+                        class="mt-3 py-1 px-4 bg-blue-800/90 text-lg rounded-lg border-white/70 border-2 transition-transform duration-300 hover:scale-110 active:bg-blue-500">submit</button>
+                    <p class="text-red-900 font-bold text-lg text-center" id="Err_msg"></p>
+                    <p class="text-red-900 font-bold text-lg text-center" id="Err_msg2"></p>
+                </div>
+            </div>
+            <!-- side body -->
+            <div class="flex flex-col md:w-2/5 pb-2">
+                <!-- navbar -->
+                <div class="flex flex-col py-3">
+                    <ul class="flex justify-evenly w-full font-semibold">
+                        <li class="list_item1">
+                            <a href="/">weather</a>
+                            <hr class="hr_line1 bg-black h-1 w-0 transition-all duration-500">
+                        </li>
+                        <li class="list_item2">
+                            <a href="/technical">technical</a>
+                            <hr class="hr_line2 bg-black h-1 w-0 transition-all duration-500">
+                        </li>
+                        <li class="list_item3">
+                            <a href="/about">about</a>
+                            <hr class="hr_line3 bg-black h-1 w-0 transition-all duration-500">
+                        </li>
+                        <li class="list_item4 shadow-md shadow-blue-300/60">
+                            <a href="/contact">contact us</a>
+                            <hr class="hr_line4 bg-black h-1 w-0 transition-all duration-500">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- contact form -->
+                <div class="my-2 mx-10 flex flex-col items-center">
+                    <h1 class="text-2xl text-blue-500">Contact Form</h1>
+                    <br>
+                    <form action="/contact" method="post" class="flex flex-col items-center">
+
+                        <input class="w-full rounded-lg pl-2" type="text" name="urname" placeholder="Enter your name"
+                            required>
+                        <br>
+                        <input class="w-full rounded-lg pl-2" type="number" name="urage" placeholder="Enter your age">
+                        <br>
+                        <input class="w-full rounded-lg pl-2" type="email" name="uremail" placeholder="Enter your email"
+                            required>
+                        <br>
+                        <textarea class="w-full rounded-lg pl-2" name="urmsg" cols="30" rows="10"
+                            placeholder="Enter your message/suggestions here"></textarea>
+                        <br>
+                        <p id="form_msg" class="text-red-900 text-center">NOTE: You can also mail at - <a href="#mailbox" class="hover:underline hover:text-blue-700">@click here</a>
+                        </p>
+                        <br>
+                        <button
+                            class="bg-white rounded-lg px-2 py-1 active:bg-blue-200  transition-transform duration-200 hover:scale-110"
+                            type="submit">submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- footer section -->
+        <footer class="flex flex-col items-center text-white mt-10">
+            <!-- images section -->
+            <div class="my-2 flex justify-around items-center w-1/4">
+                <div class=""><a href="test.html" target="_blank">
+                        <img class="h-7 transition-transform duration-200 hover:scale-110" src="/facebook_logo.jpg"
+                            alt="facebook">
+                    </a></div>
+                <div class=""><a href="test.html" target="_blank">
+                        <img class="h-7 transition-transform duration-200 hover:scale-110" src="/instagram_logo.png"
+                            alt="instagram">
+                    </a></div>
+                <div class=""><a href="test.html" target="_blank">
+                        <img class="h-7 transition-transform duration-200 hover:scale-110" src="/whatsapp_logo.jpg"
+                            alt="whatsapp">
+                    </a></div>
+            </div>
+            <!-- info section -->
+            <div class="w-2/5 flex flex-col justify-evenly md:flex-row">
+                <span class="block md:inline text-center">info</span>
+                <span class="block md:inline text-center">support</span>
+                <span class="block md:inline text-center">marketing</span>
+            </div>
+            <!-- privacy policy section -->
+            <div class="w-2/5 flex justify-evenly my-2 md:flex-row flex-col">
+                <span class="block md:inline text-center">terms of use</span>
+                <span class="block md:inline text-center">privacy policy</span>
+            </div>
+            <!-- copyright section -->
+            <div class="my-2 text-gray-400">
+                <span>@copyright Ayush kumar singh</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/contact.js"></script>
+</body>
+
+</html>
