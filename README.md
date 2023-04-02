@@ -1,13 +1,22 @@
-#weather forecast website#
+# weather forecast website
 
+weather forcast is a website uses api to tell the temperature of a given city.
 
-##In order to use it
-###1.copy all the files as it is.
-###2.open terminal and run "npm install"
-###3.again run "node app.js"
-###4.open browser and search "localhost:3000"
-###5.the output will be on the browser screen.
+## Installation
 
+copy all the files as it is from the github. then move to the directory where the files are copied and run following commands.....
 
+```bash
+npm install
+```
+```bash
+node app.js
+```
 
-##Thanks for taking a look.....
+## Usage
+
+open any browser and search 
+```bash
+localhost:3000
+```
+the above statement means that the server is live at port 3000.
